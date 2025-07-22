@@ -1,2 +1,2 @@
-# real-estate-app
-A simple to use responive real estate web app.
+# RealDeal - A simple to use responsive real estate web app
+Try it out here: 
