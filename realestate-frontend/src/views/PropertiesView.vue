@@ -41,7 +41,7 @@
         <div v-else v-for="prop in paginatedProperties" :key="prop.id" class="col">
           <RouterLink :to="`/property-details?id=${prop._id}`" class="text-decoration-none text-reset d-block h-100">
             <div class="card property-card h-100">
-              <img :src="`http://localhost:3000/properties/${prop._id}/image/0`" class="card-img-top" />
+              <img :src="`https://real-estate-app-4vp2.onrender.com/properties/${prop._id}/image/0`" class="card-img-top" />
               <div class="card-body">
                 <h5 class="card-title form-title">{{ prop.title }}</h5>
                 <p class="card-text text-muted">{{ prop.propertyType }}</p>
@@ -163,7 +163,7 @@ export default {
   methods: {
     async fetchProperties() {
       try {
-        const response = await axios.get('http://localhost:3000/properties');
+        const response = await axios.get('https://real-estate-app-4vp2.onrender.com/properties');
         this.properties = response.data;
       } catch (error) {
         console.error('Failed to fetch properties:', error);
