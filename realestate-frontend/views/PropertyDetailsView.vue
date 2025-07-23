@@ -134,7 +134,7 @@ onMounted(async () => {
 
   try {
     // Make sure this matches your backend API endpoint
-    const res = await axios.get(`http://localhost:3000/properties/${propertyId}`);
+    const res = await axios.get(`https://real-estate-app-4vp2.onrender.com/properties/${propertyId}`);
     console.log('API Response:', res);
     property.value = res.data;
   } catch (err) {
