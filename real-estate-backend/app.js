@@ -241,10 +241,6 @@ app.get('/properties/unavailable/count', async (req, res) => {
   }
 });
 
-// Fallback route: Serve index.html for all unknown frontend routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../realestate-frontend/build', 'index.html'));
-});
 
 // Socket.IO events
 io.on('connection', socket => {
