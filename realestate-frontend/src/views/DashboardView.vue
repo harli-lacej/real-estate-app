@@ -189,8 +189,8 @@ export default {
   async fetchCounts() {
     try {
       const [availableRes, unavailableRes] = await Promise.all([
-        axios.get('http://localhost:3000/properties/available/count'),
-        axios.get('http://localhost:3000/properties/unavailable/count')
+        axios.get('https://real-estate-app-4vp2.onrender.com/properties/available/count'),
+        axios.get('https://real-estate-app-4vp2.onrender.com/properties/unavailable/count')
       ]);
 
       this.countAvailable = availableRes.data.count;
@@ -228,7 +228,7 @@ if (files && files.length > 0) {
   }
 
   try {
-    const response = await axios.post('http://localhost:3000/properties', form, {
+    const response = await axios.post('https://real-estate-app-4vp2.onrender.com/properties', form, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }
@@ -249,7 +249,7 @@ if (files && files.length > 0) {
   const propertyId = document.getElementById("property-id").value;
 
   try {
-    await axios.delete(`http://localhost:3000/properties/${propertyId}`);
+    await axios.delete(`https://real-estate-app-4vp2.onrender.com/properties/${propertyId}`);
     Swal.fire("Property Deleted!", "The property has been successfully deleted.", "success").then(() => {
       this.$router.push("/properties");
     });
