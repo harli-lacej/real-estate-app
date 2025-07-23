@@ -13,7 +13,7 @@ const app = express();
 const server = http.createServer(app);
 const { Server } = require('socket.io');
 const io = new Server(server, {
-  cors: { origin: 'https://real-estate-app-frontend-enxj.onrender.com/' }
+  cors: { origin: 'https://real-estate-app-frontend-enxj.onrender.com' }
 });
 
 const uri = process.env.MONGO_URI;
