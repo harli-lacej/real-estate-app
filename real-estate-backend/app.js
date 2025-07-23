@@ -40,7 +40,10 @@ const upload = multer({
 });
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+  origin: 'https://real-estate-app-frontend-enxj.onrender.com',
+  credentials: true
+}));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
