@@ -48,10 +48,13 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// User Routes
+// ✅ Serve React frontend static files
+const frontendPath = path.join(__dirname, '../client/build');
+app.use(express.static(frontendPath));
+
+// API Routes
 app.post('/users/register', async (req, res) => {
   const { username, password } = req.body;
   try {
@@ -191,8 +194,6 @@ app.patch('/properties/:propertyId', async (req, res) => {
   }
 });
 
-
-
 app.put('/properties/:propertyId', async (req, res) => {
   try {
     const update = { $set: req.body };
@@ -238,6 +239,11 @@ app.get('/properties/unavailable/count', async (req, res) => {
   } catch (err) {
     res.status(500).json({ message: 'Server error', error: err });
   }
+});
+
+// ✅ Fallback route: Serve index.html for all unknown frontend routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
 
 // Socket.IO events
