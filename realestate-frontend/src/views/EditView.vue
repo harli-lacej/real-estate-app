@@ -118,7 +118,7 @@ const fetchProperty = async () => {
   isLoading.value = true;
   errorMessage.value = '';
   try {
-    const res = await axios.get(`http://localhost:3000/properties/${propertyId}`);
+    const res = await axios.get(`https://real-estate-app-4vp2.onrender.com/properties/${propertyId}`);
     const property = res.data;
     Object.assign(form, {
       title: property.title,
@@ -143,7 +143,7 @@ const fetchProperty = async () => {
 const handleEditProperty = async () => {
   isLoading.value = true;
   try {
-    await axios.patch(`http://localhost:3000/properties/${propertyId}`, form);
+    await axios.patch(`https://real-estate-app-4vp2.onrender.com/properties/${propertyId}`, form);
     router.push('/properties');
   } catch (err) {
     console.error("Update failed (silent):", err);
