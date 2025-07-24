@@ -84,7 +84,10 @@
   <div class="free-space"></div>
   <div class="free-space"></div>
 
-  <a :href="`/login?redirect=/edit/${propertyId}`" class="edit-link"><strong class="ms-1" >Admin, you want to edit this post? Click here!</strong></a>
+  <router-link :to="`/login?redirect=/edit/${propertyId}`" class="edit-link">
+  <strong class="ms-1">Admin, you want to edit this post? Click here!</strong>
+  </router-link>
+
 
 </div>
 
