@@ -140,8 +140,6 @@
             </div>
     
             <div class="col-md-4">
-                <!-- <h3  class="form-title">View listed properties</h3>
-                <router-link to="/properties" class="btn btn-info">Go to Properties</router-link> -->
             </div>
             <div class="free-space"></div>
         </div>
