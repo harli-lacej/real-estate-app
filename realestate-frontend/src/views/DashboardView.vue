@@ -140,8 +140,8 @@
             </div>
     
             <div class="col-md-4">
-                <h3  class="form-title">View listed properties</h3>
-                <a href="/properties" class="btn btn-info">Go to Properties</a>
+                <!--<h3  class="form-title">View listed properties</h3>
+                <a href="/properties" class="btn btn-info">Go to Properties</a>-->
             </div>
             <div class="free-space"></div>
         </div>
