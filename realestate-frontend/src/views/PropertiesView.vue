@@ -1,7 +1,7 @@
 <template>
   <main>
     <figure>
-    <img class="banner image-profile" src="/properties-banner.png" alt="Real estate graphic">
+    <img class="banner image-profile" src="/properties-banner.png" alt="Real estate graphic ">
     </figure>
     <div class="free-space"></div>
     <div class="container mt-4">
