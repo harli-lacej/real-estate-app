@@ -2,9 +2,12 @@
 
 RealDeal is a simple to use webapp.
 Try it out here: https://real-estate-app-frontend-enxj.onrender.com
+
 To login as admin use this credentials:
 username: admin
 password: admin
+
+The website is fully responsive, so it can be used in multiple device types.
 
 ## Some screenshots
 <img width="1912" height="1022" alt="s1" src="https://github.com/user-attachments/assets/3f049517-c56b-47fd-ab8c-36840d6d30de" />
