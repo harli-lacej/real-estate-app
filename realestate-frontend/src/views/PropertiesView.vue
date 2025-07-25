@@ -36,7 +36,7 @@
       <!-- Property Cards -->
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         <div v-if="filteredProperties.length === 0" class="col-12 text-center">
-          <p>No properties match your search.</p>
+          <p>Loading or no properties match your search...</p>
         </div>
         <div v-else v-for="prop in paginatedProperties" :key="prop.id" class="col">
           <RouterLink :to="`/property-details?id=${prop._id}`" class="text-decoration-none text-reset d-block h-100">
